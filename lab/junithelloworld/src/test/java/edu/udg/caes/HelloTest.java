@@ -1,14 +1,13 @@
 package edu.udg.caes;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class HelloTest {
-
     @Test
     public void testSayHello(){
-        Assertions.assertEquals(
-                new Hello().Say(),
-                "Hello World!");
+        Hello hello = new Hello();
+        final String result = hello.Say();
+        assertEquals(result, "Hello World!");
     }
 }
